@@ -7,14 +7,8 @@ principal = st.title("Lista de tarea")
 row, row2 = st.columns(2)
 row3, row4 = st.columns(2)
 
-with row:
-    lst = st.text_input("", placeholder="Lista de tarea")
 
+lst = row.text_input("", placeholder="Lista de tarea")
 
-# with row2:
-#     if st.button("➕", type="tertiary"):
-#         lst
-
-
-with row3:
+if row2.button("➕", type="tertiary"):
     agree = st.checkbox(lst)
